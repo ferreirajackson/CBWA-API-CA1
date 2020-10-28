@@ -42,7 +42,6 @@ module.exports = () => {
         }
         //Function that verifies the api-key and allows the user to 
         //keep using the system
-        //Key authentication
     const getByKey = async(key) => {
         if (!key) {
             console.log(" 01: Missing key");
