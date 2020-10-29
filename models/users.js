@@ -1,7 +1,7 @@
 const db = require('../db')();
 const COLLECTION = "users";
 //Library of encription
-const bcrypt = require('bcrypt')
+//const bcrypt = require('bcrypt')
 module.exports = () => {
     //Function that redirects the user to the final get function
     const get = async(email = null) => {
@@ -29,9 +29,9 @@ module.exports = () => {
         //Function that redirects the user to the final add function
     const add = async(name, email, usertype, key) => {
             //Hashing function for API's
-            const salt = bcrypt.genSaltSync(11);
+            /*const salt = bcrypt.genSaltSync(11);
             const hash = bcrypt.hashSync(key, salt);
-            key = hash;
+            key = hash;*/
             const results = await db.add(COLLECTION, {
                 name: name,
                 email: email,
