@@ -7,7 +7,7 @@
 * [What your project does](#what-your-project-does)
 * [How to set it up](#How-to-set-it-up)
 * [Technologies used](#technologies-used)
-* [Example usage (describing routes)](#example-usage-(describing-routes))
+* [Example usage](#example-usage)
 * [Changelog](#changelog)
 * [Roadmap](#roadmap)
 * [Author info](#author-info)
