@@ -4,7 +4,7 @@
 > Here goes your awesome project description!
 
 ## Table of contents
-* [General info](#general-info)
+* [What your project does](#what-your-project-does)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -13,7 +13,7 @@
 * [Inspiration](#inspiration)
 * [Contact](#contact)
 
-## General info
+## What your project does
 Add more general information about project. What the purpose of the project is? Motivation?
 
 ## Screenshots
