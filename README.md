@@ -1,7 +1,6 @@
-# CBWA-API-CA1
 
-# Project Name
-> Here goes your awesome project description!
+# CBWA-API-CA1
+> System developed for a college project aiming to obtain all the knowledge possible.
 
 ## Table of contents
 * [What your project does](#what-your-project-does)
@@ -13,34 +12,38 @@
 * [Author info](#author-info)
 
 ## What your project does
-Add more general information about project. What the purpose of the project is? Motivation?
+O sistema possui um cadastro e gerenciamento de um sistema bugtracking. É possível manipular users, projects, issues and comments for these projects. Everything is stored in a database (MongoDB). Quando um issue é dado como resolvido é possivel também fazer a alteração do status desde que seja um dos seguintes status:
+
+* Open
+* Wip
+* Blocked
+* Closed
+
+Todas as tabelas estão ligadas de certa forma em que quando um issue or comment is added, information like project ID and user are attached to it.
 
 ## How to set it up
 ![Example screenshot](./img/screenshot.png)
 
 ## Technologies used
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* MongoDB
+* Express
+* Nodemon
 
 ## Example usage
 Describe how to install / setup your local environement / add link to demo version.
+Instalation needed: body-parser, express, mongodb
 
 ## Changelog
-Show examples of usage:
-`put-your-code-here`
+October 2020 Created project for CBWA
+4th November 2020 Error checking/Readme
+8th November 2020 Added XXXXXX
 
 ## Roadmap
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+User interface login (Dec 2020)
 
 ## Author info
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Web developer: Jackson Ferreira dos Santos
+College name: CCT
+Course title: Science in coomputing
 
 
