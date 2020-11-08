@@ -23,7 +23,7 @@ Add more general information about project. What the purpose of the project is? 
 * Tech 2 - version 2.0
 * Tech 3 - version 3.0
 
-## Example usage (describing routes)
+## Example usage
 Describe how to install / setup your local environement / add link to demo version.
 
 ## Changelog
