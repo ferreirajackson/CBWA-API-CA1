@@ -63,11 +63,11 @@ Describe how to install / setup your local environement / add link to demo versi
 Instalation needed: body-parser, express, mongodb
 
 ## Changelog
-October 2020 - Created project for Cloud Based Web Applications subjects
-October 2020 - Implemented the following entities: projects, issues, users and comments 
-October 2020 - Added all the functions and connection to database: Aggregate, post, get, update and count
-November 2020 - Added Error checking and Readme file
-November 2020 - Added XXXXXX
+October 2020 - Created project for Cloud Based Web Applications subjects.
+October 2020 - Implemented the following entities: projects, issues, users and comments .
+October 2020 - Added all the functions and connection to database: Aggregate, post, get, update and count.
+November 2020 - Added Error checking and Readme file.
+November 2020 - Added XXXXXX.
 
 ## Roadmap
 User interface login (Dec 2020)
