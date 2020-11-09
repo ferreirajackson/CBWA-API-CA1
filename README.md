@@ -22,28 +22,60 @@ O sistema possui um cadastro e gerenciamento de um sistema bugtracking. É poss�
 Todas as tabelas estão ligadas de certa forma em que quando um issue or comment is added, information like project ID and user are attached to it.
 
 ## How to set it up
-![Example screenshot](./img/screenshot.png)
+Firstly clone the project running the following command
+```ruby
+$ git clone https://github.com/ferreirajackson/CBWA-API-CA1.git
+```
+
+Then install the dependencies used in the project you case you dont have them
+```ruby
+$ npm install body-parser
+$ npm install express
+$ npm install mongodb
+$ npm install nodemon
+```
+MONGO CONFIGURATION
+1. Create and set up a mongo account if you dont have at [Mongo-Atlas](https://www.mongodb.com/cloud/atlas)
+
+
+2. Create a cluster and get the connection link.
+![cluster](./README/cluster.png)
+
+3. Install ROBO3T at [Robo3T](https://robomongo.org/)
+
+4. Configure the database manager with the conection link
+![robo](./README/robo.png)
+
+5. Run the following variable in our node.js terminal and paste to heroku config vars so you can connect your database with your webpage
+$env:MONGO_URI="mongodb+srv://admin:<password>@cluster0.dqfdg.mongodb.net/<dbname>?retryWrites=true&w=majority"
+  
+![heroku](./README/heroku.png)
 
 ## Technologies used
-* MongoDB
-* Express
 * Nodemon
+* Express
+* MongoDB
+* Robo3T
+* Heroku
 
 ## Example usage
 Describe how to install / setup your local environement / add link to demo version.
 Instalation needed: body-parser, express, mongodb
 
 ## Changelog
-October 2020 Created project for CBWA
-4th November 2020 Error checking/Readme
-8th November 2020 Added XXXXXX
+October 2020 - Created project for Cloud Based Web Applications subjects
+October 2020 - Implemented the following entities: projects, issues, users and comments 
+October 2020 - Added all the functions and connection to database: Aggregate, post, get, update and count
+November 2020 - Added Error checking and Readme file
+November 2020 - Added XXXXXX
 
 ## Roadmap
 User interface login (Dec 2020)
+CHECK WHAT IM DOING FOR FURTHER DEVELOPMENT
 
 ## Author info
 Web developer: Jackson Ferreira dos Santos
 College name: CCT
-Course title: Science in coomputing
+Course title: Science in computing
 
 
