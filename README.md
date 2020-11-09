@@ -39,17 +39,17 @@ MONGO CONFIGURATION
 
 
 2. Create a cluster and get the connection link.
-![cluster](./README/cluster.png)
+![cluster](./instructions/cluster.png)
 
 3. Install ROBO3T at [Robo3T](https://robomongo.org/)
 
 4. Configure the database manager with the conection link
-![robo](./README/robo.png)
+![robo](./instructions/robo.png)
 
 5. Run the following variable in our node.js terminal and paste to heroku config vars so you can connect your database with your webpage
 $env:MONGO_URI="mongodb+srv://admin:<password>@cluster0.dqfdg.mongodb.net/<dbname>?retryWrites=true&w=majority"
   
-![heroku](./README/heroku.png)
+![heroku](./instructions/heroku.png)
 
 ## Technologies used
 * Nodemon
