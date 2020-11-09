@@ -63,11 +63,11 @@ $env:MONGO_URI="mongodb+srv://admin:<password>@cluster0.dqfdg.mongodb.net/<dbnam
 All the routes can be accessed through [this document](./instructions/REQUESTS_URL.docx)
 
 ## Changelog
-* October 2020 - Created project for Cloud Based Web Applications subjects.
-* October 2020 - Implemented the following entities: projects, issues, users and comments .
-* October 2020 - Added all the functions and connection to database: Aggregate, post, get, update and count.
-* November 2020 - Added Error checking and Readme file.
-* November 2020 - Added XXXXXX.
+* 9th of October 2020 - Created project for Cloud Based Web Applications subjects.
+* 13th of October 2020 - Implemented the following entities: projects, issues, users and comments .
+* 22nd of October 2020 - Added all the functions and connection to database: Aggregate, post, get, update and count.
+* 9th of November 2020 - Added Error checking and Readme file.
+* 10th of November 2020 - Added XXXXXX.
 
 ## Roadmap
 * User interface login (Dec 2020)
