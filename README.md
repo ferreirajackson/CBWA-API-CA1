@@ -1,6 +1,6 @@
 
 # CBWA-API-CA1
-> System developed for a college project aiming to obtain all the knowledge possible.
+> System developed for a college project aiming to obtain all the knowledge possible in relation to API's using Javascript.
 
 ## Table of contents
 * [What your project does](#what-your-project-does)
