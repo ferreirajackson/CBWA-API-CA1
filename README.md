@@ -44,6 +44,7 @@ MONGO CONFIGURATION
 3. Install ROBO3T at [Robo3T](https://robomongo.org/)
 
 4. Configure the database manager with the conection link
+
 ![robo](./instructions/robo.png)
 
 5. Run the following variable in our node.js terminal and paste to heroku config vars so you can connect your database with your webpage
@@ -59,8 +60,8 @@ $env:MONGO_URI="mongodb+srv://admin:<password>@cluster0.dqfdg.mongodb.net/<dbnam
 * Heroku
 
 ## Example usage
-Describe how to install / setup your local environement / add link to demo version.
-Instalation needed: body-parser, express, mongodb
+All the routes can be accessed through this document:
+![routes](./instructions/REQUESTS URL.docx)
 
 ## Changelog
 * October 2020 - Created project for Cloud Based Web Applications subjects.
