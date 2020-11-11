@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Issues</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="https://ancient-tundra-70389.herokuapp.com/">Home Page</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://ancient-tundra-70389.herokuapp.com/all/projects">Projects
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://ancient-tundra-70389.herokuapp.com/all/users">Users</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://ancient-tundra-70389.herokuapp.com/all/issues">Issues</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://ancient-tundra-70389.herokuapp.com/all/comments">Comments</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="jumbotron text-center">
+  <h1>{{title}}</h1>
+  <p>Check all the issues created in the table down below</p> 
+</div>
+  
+
+<div class="container">
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Issue Number</th>
+      <th scope="col">title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Status</th>
+      <th scope="col">Due date</th>
+    </tr>
+  </thead>
+  <tbody>{{#each issues }}
+    <tr>
+      <td>{{issueNumber}}</td>
+      <td>{{title}}</td>
+      <td>{{description}}</td>
+      <td>{{status}}</td>
+      <td>{{dueDate}}</td>
+    </tr>
+    {{/ each}}
+  </tbody>
+</table>
+</div>
+
+
+</body>
+</html>
+
+
+
+

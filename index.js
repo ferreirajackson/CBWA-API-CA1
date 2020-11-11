@@ -6,7 +6,7 @@ const projectsController = require('./controllers/projects')();
 const usersController = require('./controllers/users')();
 const issuesController = require('./controllers/issues')();
 const commentsController = require('./controllers/comments')();
-const users = require('./models/users')();
+
 
 const app = module.exports = express();
 
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
 //Line 21 to 52 validates the api key so the user can only use the API with the right key
 //The key is kept in "key" field of the "users" table
-app.use(async(req, res, next) => {
+/*app.use(async(req, res, next) => {
     const FailedAuthMessage = {
         error: "Failed Authentication",
         message: "Go away!",
@@ -50,9 +50,60 @@ app.use(async(req, res, next) => {
         return res.status(401).json(FailedAuthMessage);
     }
     next();
-});
+});*/
 
 app.use(bodyParser.json())
+
+const path = require('path');
+const projects = require('./models/projects')();
+const users = require('./models/users')();
+const comments = require('./models/comments')();
+const issues = require('./models/issues')();
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+
+
+app.get("/", async(req, res) => {
+    res.render('index', {
+        title: "CA2 CBWA",
+    });
+});
+
+
+app.get("/all/issues", async(req, res) => {
+    const { issuesList } = await issues.get();
+    res.render('issues', {
+        title: "Issues",
+        issues: issuesList
+    });
+});
+
+app.get("/all/projects", async(req, res) => {
+    const { projectsList } = await projects.get();
+    res.render('projects', {
+        title: "Projects",
+        projects: projectsList
+    });
+});
+
+
+
+app.get("/all/comments", async(req, res) => {
+    const { commentsList } = await comments.get();
+    res.render('comments', {
+        title: "Comments",
+        comments: commentsList
+    });
+});
+
+app.get("/all/users", async(req, res) => {
+    const { userList } = await users.get();
+    res.render('users', {
+        title: "Users",
+        users: userList
+    });
+});
+
 
 //Get all projects
 app.get('/projects', projectsController.getController);
