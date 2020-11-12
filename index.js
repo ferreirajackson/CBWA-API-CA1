@@ -160,10 +160,16 @@ app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
 
+/*app.get("/all/users", async(req, res) => {
+    const { userList } = await users.get();
+    res.render('users', {
+        title: "Users",
+        users: userList
+    });
+});*/
 
 app.use((req, res) => {
-    res.status(404).json({
-        error: 404,
-        message: 'Route not found',
+    res.render('error', {
+        title: "#PAGE NOT FOUND"
     });
 });
