@@ -62,6 +62,7 @@ $env:MONGO_URI="mongodb+srv://admin:<password>@cluster0.dqfdg.mongodb.net/<dbnam
 
 ## Example usage
 All the routes can be accessed through [this document](./instructions/REQUESTS_URL.docx)
+[This document](./instructions/USAGE_URL.docx) is a guide on how to use the functionalities applied to the project. 
 
 ## Changelog
 * 9th of October 2020 - Created project for Cloud Based Web Applications subjects.
