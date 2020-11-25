@@ -12,7 +12,7 @@
 * [Author info](#author-info)
 
 ## What your project does
-The code is to do with registration and management of a bugtracking system. It is possible to manipulate users, projects, issues and comments for these projects and Everything is stored in a database (MongoDB). When an issue is resolved it is also possible to change the status as long as it is one of the following status:
+The code is to do with registration and management of a bugtracking system. It is possible to manipulate users, projects, issues and comments for these projects and everything is stored in a database (MongoDB). When an issue is resolved it is also possible to change the status as long as it is one of the following status:
 
 * Open
 * Wip
@@ -61,8 +61,8 @@ $env:MONGO_URI="mongodb+srv://admin:<password>@cluster0.dqfdg.mongodb.net/<dbnam
 * Heroku
 
 ## Example usage
-All the routes can be accessed through [this document](./instructions/REQUESTS_URL.docx)
-[This document](./instructions/USAGE_URL.docx) is a guide on how to use the functionalities applied to the project. 
+* All the routes can be accessed through [this document](./instructions/REQUESTS_URL.docx).
+* [This document](./instructions/USAGE_URL.docx) is a guide on how to use the functionalities applied to the project. 
 
 ## Changelog
 * 9th of October 2020 - Created project for Cloud Based Web Applications subjects.
