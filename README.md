@@ -12,7 +12,7 @@
 * [Author info](#author-info)
 
 ## What your project does
-The system has a registration and management of a bugtracking system. It is possible to manipulate users, projects, issues and comments for these projects. Everything is stored in a database (MongoDB). When an issue is resolved it is also possible to change the status as long as it is one of the following statuses:
+The code is to do with registration and management of a bugtracking system. It is possible to manipulate users, projects, issues and comments for these projects and Everything is stored in a database (MongoDB). When an issue is resolved it is also possible to change the status as long as it is one of the following status:
 
 * Open
 * Wip
@@ -33,6 +33,7 @@ $ npm install body-parser
 $ npm install express
 $ npm install mongodb
 $ npm install nodemon
+$ npm install nodemailer
 ```
 MONGO CONFIGURATION
 1. Create and set up a mongo account if you dont have at [Mongo-Atlas](https://www.mongodb.com/cloud/atlas)
@@ -64,18 +65,23 @@ All the routes can be accessed through [this document](./instructions/REQUESTS_U
 
 ## Changelog
 * 9th of October 2020 - Created project for Cloud Based Web Applications subjects.
-* 13th of October 2020 - Implemented the following entities: projects, issues, users and comments .
+* 13th of October 2020 - Implemented the following entities: projects, issues, users and comments.
 * 22nd of October 2020 - Added all the functions and connection to database: Aggregate, post, get, update and count.
 * 9th of November 2020 - Added Error checking and Readme file.
-* 10th of November 2020 - Added XXXXXX.
+* 12nd of November 2020 - Implemented the nodmailer and watchers.
+* 18th of November 2020 - Implemented the frontend.
+* 19th of November 2020 - Kept working on the frontend.
+* 20th of November 2020 - Implemented the dueDate functionality.
+* 25th of November 2020 - Checked if the project was working in a whole.
 
 ## Roadmap
-* User interface login (Dec 2020)
-* CHECK WHAT IM DOING FOR FURTHER DEVELOPMENT
+* Implement post and put methods to the frontend using handlebars. (Dec 2020)
+* Docker-ise it. (Dec 2020)
+* Repaginate the frontend with React. (Dec 2020)
 
 ## Author info
-Web developer: Jackson Ferreira dos Santos
-College name: CCT
+Web developer: Jackson Ferreira dos Santos | 
+College name: CCT | 
 Course title: Science in computing
 
 
