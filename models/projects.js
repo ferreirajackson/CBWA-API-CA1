@@ -125,10 +125,6 @@ module.exports = () => {
                 }
                 return response;
             }
-
-
-
-
         } catch (ex) {
             console.log("-=-=-=-=-=- ERROR AT: UPDATE PROJECT/LINKING ISSUE -=-=-=-=-=-")
             return { error: ex }
@@ -167,20 +163,13 @@ module.exports = () => {
             var dueDate = arrayIssues[num - 1].dueDate;
             var issuNum = arrayIssues[num - 1].issueNumber;
             var date = new Date();
-            //console.log(dueDate + ' first')
             const day = date.getDate();
-            //console.log(day)
             const month = date.getMonth() + 1;
-            //console.log(month);
             const year = date.getFullYear();
-            //console.log(year)
-            //console.log(day + '/' + month + '/' + year)
             var date1 = date;
             var date2 = month + '/' + day + '/' + year;
             date1 = new Date(dueDate);
             date2 = new Date(date2);
-            //console.log(date1)
-            //console.log(date2)
             if (date1 < date2) {
                 const error_message = "It was not possible update the status for this project, this project is expired! The due date was on " + dueDate;
                 const response = {
@@ -189,12 +178,8 @@ module.exports = () => {
                 return response;
             };
             //////////////////////////////////////////////////////////
-
-
-
             const newValues = { $set: { status: status } };
             const projects = await db.upd(COLLECTION_ISSUES, { _id }, newValues);
-
             ////////////////////////////////////////////////////////////////
             arrayadmins.forEach(element => {
                 //email sender
@@ -229,7 +214,6 @@ module.exports = () => {
             console.log("-=-=-=-=-=- ERROR AT: UPDATE  PROJECT/SENDING EMAIL -=-=-=-=-=-")
             return { error: ex }
         }
-
     };
     //Function that redirects the project to the final add function
     const add = async(slug, name, description) => {
