@@ -12,14 +12,14 @@
 * [Author info](#author-info)
 
 ## What your project does
-O sistema possui um cadastro e gerenciamento de um sistema bugtracking. É possível manipular users, projects, issues and comments for these projects. Everything is stored in a database (MongoDB). Quando um issue é dado como resolvido é possivel também fazer a alteração do status desde que seja um dos seguintes status:
+The system has a registration and management of a bugtracking system. It is possible to manipulate users, projects, issues and comments for these projects. Everything is stored in a database (MongoDB). When an issue is resolved it is also possible to change the status as long as it is one of the following statuses:
 
 * Open
 * Wip
 * Blocked
 * Closed
 
-Todas as tabelas estão ligadas de certa forma em que quando um issue or comment is added, information like project ID and user are attached to it.
+All tables are linked in a way that when an issue or comment is added, information like project ID and user are attached to it.
 
 ## How to set it up
 Firstly clone the project running the following command
