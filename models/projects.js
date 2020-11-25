@@ -176,7 +176,7 @@ module.exports = () => {
             //console.log(year)
             //console.log(day + '/' + month + '/' + year)
             var date1 = date;
-            var date2 = day + '/' + month + '/' + year;
+            var date2 = month + '/' + day + '/' + year;
             date1 = new Date(dueDate);
             date2 = new Date(date2);
             //console.log(date1)
