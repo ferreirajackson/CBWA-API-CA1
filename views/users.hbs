@@ -8,7 +8,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+   <style>
+    .jumbotron {
+      background-color:brown;
+    }
+    .letter {
+      color: white;
+    }
+  </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -38,8 +45,8 @@
     </div>
   </nav>
 <div class="jumbotron text-center">
-  <h1>{{title}}</h1>
-  <p>Check all the users created in the table down below</p> 
+  <h1 class="letter">{{title}}</h1>
+  <p class="letter">Check all the users created in the table down below</p> 
 </div>
   
 
@@ -63,6 +70,43 @@
   </tbody>
 </table>
 </div>
+
+
+<div class="jumbotron text-center">
+  <h1 class="letter">{{title}} APIs</h1>
+  <p class="letter">In case you want to access the API (json) format choose one of the following:</p> 
+</div>
+
+<div class="container">
+ <table class="table table-hover">
+   <thead>
+    <tr>
+      <th scope="col">Access all users</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a class="nav-link links" target="_blank" href="https://ancient-tundra-70389.herokuapp.com/users">• All users</a></p></td>
+        </tr>
+      <!-- -->
+  </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Access individual users</th>
+     
+    </tr>
+  </thead>
+  <tbody>{{#each users }}
+    <tr>
+         <td><p><a class="nav-link links" target="_blank" href="https://ancient-tundra-70389.herokuapp.com/users/{{email}}">• {{name}}</a></p></td>
+      {{/ each}}
+      </tr>
+      <!-- -->
+    </tbody>
+  </table>
+</div>
+
 
 
 </body>

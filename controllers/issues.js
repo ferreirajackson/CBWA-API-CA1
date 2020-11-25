@@ -1,7 +1,24 @@
 const issues = require('../models/issues.js')();
+const projects = require('../models/projects.js')();
 module.exports = () => {
     //Controller that calls the get function to all issues
     const getController = async(req, res) => {
+        const { issuesList, error } = await issues.aggregateAllComments();
+        if (error) {
+            console.log("error")
+            return res.status(500).json({ error })
+        }
+        const { projectsList } = await projects.get();
+
+        //res.json({ issues: issuesList });
+        res.render('issues', {
+            title: "Issues",
+            issues: issuesList,
+            projects: projectsList
+        });
+
+    }
+    const getControllerAPI = async(req, res) => {
             const { issuesList, error } = await issues.aggregateAllComments();
             if (error) {
                 console.log("error")
@@ -53,6 +70,7 @@ module.exports = () => {
     }
     return {
         getController,
+        getControllerAPI,
         postController,
         getById,
         aggregateController,

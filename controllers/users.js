@@ -7,6 +7,18 @@ module.exports = () => {
             console.log("error")
             return res.status(500).json({ error })
         }
+        //res.json({ users: userList });
+        res.render('users', {
+            title: "Users",
+            users: userList
+        });
+    };
+    const getControllerAPI = async(req, res) => {
+        const { userList, error } = await users.get();
+        if (error) {
+            console.log("error")
+            return res.status(500).json({ error })
+        }
         res.json({ users: userList });
     };
     //Controller that calls get function to an individual user
@@ -17,6 +29,7 @@ module.exports = () => {
                 return res.status(500).json({ error })
             }
             res.json({ users: userList });
+
         }
         //Controller that calls the add user function
     const postController = async(req, res) => {
@@ -33,6 +46,7 @@ module.exports = () => {
     }
     return {
         getController,
+        getControllerAPI,
         postController,
         getById
     }

@@ -59,54 +59,47 @@ const projects = require('./models/projects')();
 const users = require('./models/users')();
 const comments = require('./models/comments')();
 const issues = require('./models/issues')();
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 
 app.get("/", async(req, res) => {
+    const { issuesList } = await issues.get();
+    const { commentsList } = await comments.get();
+    const { projectsList } = await projects.get();
+    const { userList } = await users.get();
+    console.log("LISTSSSSSSSSSSSSSSS")
+    console.log(issuesList)
+    console.log(commentsList)
+    console.log(projectsList)
+    console.log(userList)
+
     res.render('index', {
         title: "CA2 CBWA",
+        projects: projectsList,
+        users: userList,
+        issues: issuesList,
+        comments: commentsList,
     });
 });
 
 
-app.get("/all/issues", async(req, res) => {
-    const { issuesList } = await issues.get();
-    res.render('issues', {
-        title: "Issues",
-        issues: issuesList
-    });
-});
+app.get("/all/issues", issuesController.getController);
 
-app.get("/all/projects", async(req, res) => {
-    const { projectsList } = await projects.get();
-    res.render('projects', {
-        title: "Projects",
-        projects: projectsList
-    });
-});
+app.get("/all/projects", projectsController.getController);
 
+app.get("/all/comments", commentsController.getController);
 
+app.get("/all/users", usersController.getController);
 
-app.get("/all/comments", async(req, res) => {
-    const { commentsList } = await comments.get();
-    res.render('comments', {
-        title: "Comments",
-        comments: commentsList
-    });
-});
-
-app.get("/all/users", async(req, res) => {
-    const { userList } = await users.get();
-    res.render('users', {
-        title: "Users",
-        users: userList
-    });
-});
+//https://stackoverflow.com/questions/22195065/how-to-send-a-json-object-using-html-form-data
+//https://stackoverflow.com/questions/3350247/how-to-prevent-form-from-being-submitted
+//https://stackoverflow.com/questions/8664486/javascript-code-to-stop-form-submission
 
 
 //Get all projects
-app.get('/projects', projectsController.getController);
+app.get('/projects', projectsController.getControllerAPI);
 
 //Add new Projects individually
 app.post('/projects', projectsController.postController);
@@ -124,7 +117,7 @@ app.put("/projects/:slug/issues/:num/:status", projectsController.updateStatusCo
 app.get('/projects/:slug', projectsController.getById);
 
 //Get all users
-app.get('/users', usersController.getController);
+app.get('/users', usersController.getControllerAPI);
 
 //Add new users individually
 app.post('/users', usersController.postController);
@@ -133,7 +126,7 @@ app.post('/users', usersController.postController);
 app.get('/users/:email', usersController.getById);
 
 //Get all issues (bring comments with it)
-app.get('/issues', issuesController.getController);
+app.get('/issues', issuesController.getControllerAPI);
 
 //Add new issues to a project individually
 app.post('/projects/:slug/issues', issuesController.postController);
@@ -151,7 +144,7 @@ app.get('/issues/:issueNumber', issuesController.getById);
 app.post("/issues/:issueNumber/comments", commentsController.postUnitController);
 
 //Get all comments (optional)
-app.get('/comments', commentsController.getController);
+app.get('/comments', commentsController.getControllerAPI);
 
 //Get all comments for an author (optional)
 app.get('/comments/:author', commentsController.getById);

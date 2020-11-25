@@ -2,6 +2,18 @@ const projects = require('../models/projects.js')();
 module.exports = () => {
     //Controller that calls the get function to all projects
     const getController = async(req, res) => {
+        const { projectsList, error } = await projects.get();
+        if (error) {
+            console.log("error")
+            return res.status(500).json({ error })
+        }
+        //res.json({ projects: projectsList });
+        res.render('projects', {
+            title: "Projects",
+            projects: projectsList
+        });
+    }
+    const getControllerAPI = async(req, res) => {
             const { projectsList, error } = await projects.get();
             if (error) {
                 console.log("error")
@@ -65,6 +77,7 @@ module.exports = () => {
     }
     return {
         getController,
+        getControllerAPI,
         postController,
         getById,
         aggregateController,
