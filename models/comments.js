@@ -51,15 +51,22 @@ module.exports = () => {
             var issueNum = issue_array[0].issueNumber;
 
             //Validates if a comment can be added based on the dueDate
+            console.log("HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
             var dueDate = issue_array[0].dueDate;
+            console.log(dueDate)
             var date = new Date();
             const day = date.getDate();
             const month = date.getMonth() + 1;
             const year = date.getFullYear();
             var date1 = date;
-            var date2 = day + '/' + month + '/' + year;
+            var date2 = month + '/' + day + '/' + year;
+            console.log(date1)
+            console.log(date2)
             date1 = new Date(dueDate);
             date2 = new Date(date2);
+            console.log("resulttttttttttttttttttttttttttt")
+            console.log(date1)
+            console.log(date2)
             if (date1 < date2) {
                 const error_message = "It was not possible to add the comment, this issue is expired! The due date was on " + dueDate;
                 const response = {
